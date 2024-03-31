@@ -344,7 +344,7 @@ const handleInput = async (input) => {
     }
   }else {
     const nutritionInfo = await fetchNutritionFromAPI(input);
-    if (nutritionInfo) {
+    if (nutritionInfo!="tablet" && nutritionInfo) {
       let output = displayAPIInformation(nutritionInfo);
       res = output;
       return res;
